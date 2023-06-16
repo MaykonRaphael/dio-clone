@@ -11,5 +11,6 @@ export const Global = createGlobalStyle`
   body {
     background-color: #1E192C;
     font-family: 'Open Sans';
+    color: #FFF;
   }
 `
