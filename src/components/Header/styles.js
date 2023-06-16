@@ -39,6 +39,8 @@ export const SearchButtonContainer = styled.div`
   border-radius: 8px;
   padding: 2px 5px;
   margin: 0 12px;
+
+  display: flex;
 `
 
 export const Menu = styled.a`
@@ -70,5 +72,6 @@ export const Input = styled.input`
   background: transparent;
   flex: 1;
   border: none;
+  outline: none;
   color: #FFF;
 `
