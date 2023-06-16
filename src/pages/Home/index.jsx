@@ -1,12 +1,37 @@
 import Button from "../../components/Button";
 import Header from "../../components/Header";
 
+import {
+  Container,
+  Title,
+  TitleContent,
+  TitleHighlight
+} from "./styles";
+
+import banner from '../../assets/banner.png';
+
 export default function Home() {
   return (
     <div>
       <Header/>
-      <Button title='Teste 1'/>
-      <Button title='Teste 2' variant="secondary"/>
+      <Container>
+        <div>
+          <Title>
+            <TitleHighlight>
+              Implemente<br/>
+            </TitleHighlight>
+            o seu futuro global agora!
+          </Title>
+          <TitleContent>
+            Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo e encare seu novo
+            desafio profissional, evoluindo em comunidade com os melhores experts.
+          </TitleContent>
+          <Button title='Começar agora' variant="secondary" />
+        </div>
+        <div>
+          <img src={banner} alt="Banner" />
+        </div>
+      </Container>
     </div>
   );
 }
