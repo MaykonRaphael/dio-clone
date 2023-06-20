@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 
+import { api } from '../../lib/api';
 import { MdEmail, MdLock } from 'react-icons/md';
 import Header from "../../components/Header";
 import Button from "../../components/Button";
@@ -38,7 +39,14 @@ export function Login() {
     resolver: yupResolver(schema),
     mode: 'onChange'
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (formData) => {
+    try {
+      const { data } = await api.get(`users?email=${formData.email}&password=${formData.password}`);
+      data.length === 1 ? navigate('/feed') : alert('Email ou senha inválidos');
+    } catch (error) {
+      alert("Error: ", error.message);
+    }
+  };
 
   return (
     <div>
@@ -57,14 +65,14 @@ export function Login() {
             <form onSubmit={handleSubmit(onSubmit)}>
               <Input
                 name="email"
-                errorMessage={errors?.email?.message}
+                errorMessage={errors.email?.message}
                 control={control}
                 placeholder="E-mail"
                 icon={<MdEmail/>}
               />
               <Input
                 name="password"
-                errorMessage={errors?.password?.message}
+                errorMessage={errors.password?.message}
                 control={control}
                 placeholder="Senha"
                 type="password"
