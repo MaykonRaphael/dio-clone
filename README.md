@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Getting started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+---
+<h1 align="center">
+    <img alt="Dio-Clone" title="Dio-Clone" src=".github/home.png" />
+</h1>
 
-In the project directory, you can run:
+---
+## 💻 Project
 
-### `npm start`
+Desafio para a Formação React Developer da dio.me:
+Objetivo: Desenvolver a tela de cadastro com os ensinamentos das aulas onde desenvolvi as paginas Home, Login e Feed.
+Aprendi a usar o react-hook-form para lidar com formulários
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧪 Technologies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project was developed using the following technologies:
+ 
+- [ReactJS](https://react.dev/)
+- [react-hook-form](https://react-hook-form.com/)
+- [styled-components](https://styled-components.com/)
+- [json-server](https://github.com/typicode/json-server)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [axios](https://axios-http.com/)
+- [yup](https://www.npmjs.com/package/yup)
 
-### `npm test`
+## 🚀 Getting started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the project and access the folder.
 
-### `npm run build`
+```bash
+$ git clone https://github.com/MaykonRaphael/dio-clone.git
+$ cd dio-clone
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instal all dependencies
+```bash
+$ npm i
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the project
+```bash
+$ npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔖 Layout
 
-### `npm run eject`
+You can view the project layout through the links below:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Layout](https://www.figma.com/file/Stq6FpVPmSzi0lakCPnazr/DIO-Clone?type=design&node-id=0-1&t=U7w12MHDWfPsMH7m-0)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Remembering that you need to have a [Figma](http://figma.com/) account to access it.

@@ -82,7 +82,7 @@ export function Login() {
             </form>
             <Row>
               <ForgotText>Esqueci minha senha</ForgotText>
-              <CreateText>Criar conta</CreateText>
+              <CreateText href="/signUp">Criar conta</CreateText>
             </Row>
           </Wrapper>
         </Column>

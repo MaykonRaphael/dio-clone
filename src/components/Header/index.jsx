@@ -40,7 +40,7 @@ export default function Header({authenticated}) {
             <MenuRight>
               <HomeLink href='/'>Home</HomeLink>
               <Button title='Entrar' onClick={()=> navigate('/login')} />
-              <Button title='Cadastrar'/>
+              <Button title='Cadastrar' onClick={()=> navigate('/signUp')}/>
             </MenuRight>
           )}
         </Row>

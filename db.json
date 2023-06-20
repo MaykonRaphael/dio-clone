@@ -1,6 +1,22 @@
 {
   "users": [
-    {"id": 1, "name": "Maykon Raphael", "email": "mraphaeld.batista@gmail.com", "password": "123456"},
-    {"id": 2, "name": "Heitor Storch", "email": "emaildeteste@gmail.com", "password": "123456"}
+    {
+      "id": 1,
+      "name": "Maykon Raphael",
+      "email": "mraphaeld.batista@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Heitor Storch",
+      "email": "emaildeteste@gmail.com",
+      "password": "123456"
+    },
+    {
+      "name": "Maykon Raphael ",
+      "email": "teste@gmail.com",
+      "password": "123456",
+      "id": 3
+    }
   ]
 }
