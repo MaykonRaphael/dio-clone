@@ -8,7 +8,7 @@ import {
 } from "./styles";
 import UserInfo from "../../components/UserInfo";
 
-export default function Feed() {
+export function Feed() {
   return (
     <div>
       <Header authenticated/>

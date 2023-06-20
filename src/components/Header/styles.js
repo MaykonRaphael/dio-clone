@@ -51,12 +51,20 @@ export const Menu = styled.a`
   margin-right: 12px;
 `
 
-export const MenuRight = styled.a`
+export const HomeLink = styled.a`
   font-style: normal;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 25px;
   color: #FFF;
-  margin-right: 12px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+export const MenuRight = styled.div`
+  display: flex;
+  gap: 12px;
 `
 
 export const UserPicture = styled.img`
