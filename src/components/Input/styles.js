@@ -22,3 +22,8 @@ export const InputText = styled.input`
   border: none;
   outline: none;
 `
+
+export const ErrorMessage = styled.p`
+  color: #E83F5B;
+  font-size: 12px;
+`
