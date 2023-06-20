@@ -34,10 +34,10 @@ export const Wrapper = styled.div`
 
 export const SearchButtonContainer = styled.div`
   width: 175px;
-  height: 38px;
+  height: 32px;
   background: #2D2D27;
   border-radius: 8px;
-  padding: 2px 5px;
+  padding: 2px 8px;
   margin: 0 12px;
 
   display: flex;
@@ -45,7 +45,7 @@ export const SearchButtonContainer = styled.div`
 
 export const Menu = styled.a`
   font-style: normal;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 25px;
   color: #FFF;
   margin-right: 12px;
@@ -59,7 +59,7 @@ export const MenuRight = styled.a`
   margin-right: 12px;
 `
 
-export const UserPicture = styled.image`
+export const UserPicture = styled.img`
   width: 32px;
   height: 32px;
   border-radius: 22px;

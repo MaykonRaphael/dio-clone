@@ -1,7 +1,7 @@
-import Login from "./pages/Login";
+import Feed from "./pages/Feed";
 
 export default function App() {
   return (
-    <Login/>
+    <Feed/>
   );
 }
