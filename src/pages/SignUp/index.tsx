@@ -6,8 +6,9 @@ import { MdEmail, MdLock, MdAccountCircle } from 'react-icons/md';
 
 import { api } from "../../lib/api";
 
-import Header from '../../components/Header';
-import Input from '../../components/Input';
+import { Header } from '../../components/Header';
+import { Input } from '../../components/Input';
+import { Button } from "../../components/Button";
 
 import {
   Column,
@@ -19,7 +20,7 @@ import {
   TitleSignUp,
   Wrapper
 } from './styles';
-import Button from "../../components/Button";
+import { IFormData } from "./types";
 
 const schema = yup.object({
   name: yup.string().required('Campo Obrigatório'),
@@ -36,20 +37,22 @@ export function SignUp() {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: 'onChange'
   });
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       const { data } = await api.post('/users', {
         name: formData.name,
         email: formData.email,
         password: formData.password
       });
-      data.name !== '' ? navigate('/feed') : alert('Error ao criar conta!');
-    } catch (error) {
-      alert("Error: ", error.message);
+      if(data.name !== '') {
+        navigate('/feed')
+      }
+    } catch {
+      alert("Error: Erro ao criar conta!");
     }
   };
 

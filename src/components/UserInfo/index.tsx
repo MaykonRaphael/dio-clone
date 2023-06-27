@@ -1,11 +1,12 @@
-import UserPicture from '../UserPicture';
+import { UserPicture } from '../UserPicture';
 import {
   Container,
   NameText,
   Progress
 } from './styles';
+import { IUserInfo } from './types';
 
-export default function UserInfo({name, percentual}) {
+export function UserInfo({name, percentual}: IUserInfo) {
   return (
     <Container>
       <UserPicture/>

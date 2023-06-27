@@ -1,12 +1,13 @@
-import Header from "../../components/Header";
-import Card from "../../components/Card";
+import { Header } from "../../components/Header";
+import { Card } from "../../components/Card";
+import { UserInfo } from "../../components/UserInfo";
+
 import {
   Container,
   Title,
   Column,
   TitleHighlight
 } from "./styles";
-import UserInfo from "../../components/UserInfo";
 
 export function Feed() {
   return (

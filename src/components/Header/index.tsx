@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import Button from '../Button';
+import { Button } from '../Button';
 import {
   Container,
   HomeLink,
@@ -13,8 +13,9 @@ import {
   Wrapper
 } from './styles';
 import logo from '../../assets/logo.png';
+import { IHeader } from './types';
 
-export default function Header({authenticated}) {
+export function Header({authenticated}: IHeader) {
 
   const navigate = useNavigate();
   

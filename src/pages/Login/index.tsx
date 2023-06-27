@@ -2,12 +2,12 @@ import { useForm } from "react-hook-form"
 import { useNavigate } from 'react-router-dom';
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import { MdEmail, MdLock } from 'react-icons/md';
 
 import { api } from '../../lib/api';
-import { MdEmail, MdLock } from 'react-icons/md';
-import Header from "../../components/Header";
-import Button from "../../components/Button";
-import Input from "../../components/Input";
+import { Header } from "../../components/Header";
+import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
 
 import {
   Container,
@@ -20,6 +20,7 @@ import {
   TitleLogin,
   Wrapper
 } from "./styles";
+import { IFormData } from "./types";
 
 const schema = yup.object({
     email: yup.string().email('Digite um email valido').required('Campo Obrigatório'),
@@ -35,16 +36,18 @@ export function Login() {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: 'onChange'
   });
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       const { data } = await api.get(`users?email=${formData.email}&password=${formData.password}`);
-      data.length === 1 ? navigate('/feed') : alert('Email ou senha inválidos');
-    } catch (error) {
-      alert("Error: ", error.message);
+      if(data.length === 1) {
+        navigate('/feed')
+      }
+    } catch {
+      alert("Error: Email ou senha inválidos!");
     }
   };
 

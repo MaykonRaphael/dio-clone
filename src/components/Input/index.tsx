@@ -5,8 +5,9 @@ import {
   InputText,
   ItemContainer
 } from './styles';
+import { IInput } from "./types";
 
-export default function Input({icon, name, errorMessage, control, ...rest}) {
+export function Input({icon, name, errorMessage, control, ...rest}: IInput) {
   return (
     <>
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
