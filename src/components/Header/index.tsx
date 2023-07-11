@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Button } from '../Button';
 import {
@@ -13,18 +13,22 @@ import {
   Wrapper
 } from './styles';
 import logo from '../../assets/logo.png';
-import { IHeader } from './types';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/auth';
 
-export function Header({authenticated}: IHeader) {
+export function Header() {
 
   const navigate = useNavigate();
+  const { user, handleSignOut } = useContext(AuthContext)
   
   return (
     <Wrapper>
       <Container>
         <Row>
-          <img src={logo} alt='Logo DIO' />
-          {authenticated ? (
+          <Link to='/'>
+            <img src={logo} alt='Logo DIO' />
+          </Link>
+          {user.id ? (
             <>
               <SearchButtonContainer>
                 <Input placeholder='Buscar...'/>
@@ -35,8 +39,15 @@ export function Header({authenticated}: IHeader) {
           ) : null}
         </Row>
         <Row>
-          {authenticated ? (
-            <UserPicture src="https://avatars.githubusercontent.com/u/82620378?v=4"/>
+          {user.id ? (
+            <>
+              <UserPicture src="https://avatars.githubusercontent.com/u/82620378?v=4"/>
+              <Link
+                to="/"
+                onClick={handleSignOut}
+                style={{marginLeft: 14, color: '#F00'}}
+              >Sair</Link>
+            </>
           ) : (
             <MenuRight>
               <HomeLink href='/'>Home</HomeLink>

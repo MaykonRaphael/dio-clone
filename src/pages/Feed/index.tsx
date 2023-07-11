@@ -8,11 +8,16 @@ import {
   Column,
   TitleHighlight
 } from "./styles";
+import { useContext } from "react";
+import { AuthContext } from "../../context/auth";
 
 export function Feed() {
+
+  const { user } = useContext(AuthContext)
+
   return (
     <div>
-      <Header authenticated/>
+      <Header />
       <Container>
         <Column flex={3}>
           <Title>Feed</Title>
@@ -25,12 +30,12 @@ export function Feed() {
         </Column>
         <Column flex={1}>
           <TitleHighlight># RANKING TOP 5 DA SEMANA</TitleHighlight>
-          <UserInfo name='Maykon Raphael' percentual={45} />
-          <UserInfo name='Maykon Raphael' percentual={50} />
-          <UserInfo name='Maykon Raphael' percentual={20} />
-          <UserInfo name='Maykon Raphael' percentual={60} />
-          <UserInfo name='Maykon Raphael' percentual={87} />
-          <UserInfo name='Maykon Raphael' percentual={30} />
+          <UserInfo name={user.name} percentual={45} />
+          <UserInfo name={user.name} percentual={50} />
+          <UserInfo name={user.name} percentual={20} />
+          <UserInfo name={user.name} percentual={60} />
+          <UserInfo name={user.name} percentual={87} />
+          <UserInfo name={user.name} percentual={30} />
         </Column>
       </Container>
     </div>

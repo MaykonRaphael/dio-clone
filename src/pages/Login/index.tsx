@@ -1,10 +1,8 @@
 import { useForm } from "react-hook-form"
-import { useNavigate } from 'react-router-dom';
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { MdEmail, MdLock } from 'react-icons/md';
 
-import { api } from '../../lib/api';
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
@@ -21,6 +19,8 @@ import {
   Wrapper
 } from "./styles";
 import { IFormData } from "./types";
+import { useContext } from "react";
+import { AuthContext } from "../../context/auth";
 
 const schema = yup.object({
     email: yup.string().email('Digite um email valido').required('Campo Obrigatório'),
@@ -30,7 +30,7 @@ const schema = yup.object({
 
 export function Login() {
 
-  const navigate = useNavigate();
+  const { handleLogin } = useContext(AuthContext);
 
   const {
     control,
@@ -41,14 +41,7 @@ export function Login() {
     mode: 'onChange'
   });
   const onSubmit = async (formData: IFormData) => {
-    try {
-      const { data } = await api.get(`users?email=${formData.email}&password=${formData.password}`);
-      if(data.length === 1) {
-        navigate('/feed')
-      }
-    } catch {
-      alert("Error: Email ou senha inválidos!");
-    }
+    handleLogin(formData)
   };
 
   return (
