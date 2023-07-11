@@ -8,12 +8,11 @@ import {
   Column,
   TitleHighlight
 } from "./styles";
-import { useContext } from "react";
-import { AuthContext } from "../../context/auth";
+import { useAuth } from "../../hooks/useAuth";
 
 export function Feed() {
 
-  const { user } = useContext(AuthContext)
+  const { user } = useAuth()
 
   return (
     <div>

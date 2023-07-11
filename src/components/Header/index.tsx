@@ -13,13 +13,12 @@ import {
   Wrapper
 } from './styles';
 import logo from '../../assets/logo.png';
-import { useContext } from 'react';
-import { AuthContext } from '../../context/auth';
+import { useAuth } from '../../hooks/useAuth';
 
 export function Header() {
 
   const navigate = useNavigate();
-  const { user, handleSignOut } = useContext(AuthContext)
+  const { user, handleSignOut } = useAuth()
   
   return (
     <Wrapper>
